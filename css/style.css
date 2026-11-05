@@ -28,3 +28,42 @@ font-family: 'Playfair Display', serif;
   gap: 35px;
   align-items: center;
 }
+.hero {
+  background-image: url("../images/hero image.jpg");
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 16px;
+}
+.hero-content {text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(253, 245, 245, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 15px;
+}
+.hero-buttons  {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-buttons a {
+  background-color: var(--berry);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+}
+.hero-buttons a:hover {
+  background-color: #542638;
+  transition: all 0.3s ease;
+  transform: translateY(-3px);
+}
