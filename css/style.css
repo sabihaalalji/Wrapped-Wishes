@@ -7,12 +7,15 @@
 }body {margin: 0;
 background-color: var(--porcelain);
 color: var(--deep-plum);
+margin: 20px;
 }
 nav {background-color: var(--soft-blush)
 ; display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 20px 50px;
+margin: 0;
+
 }
 nav a {color: var(--deep-plum);
 text-decoration: none;
@@ -66,4 +69,22 @@ font-family: 'Playfair Display', serif;
   background-color: #542638;
   transition: all 0.3s ease;
   transform: translateY(-3px);
+}
+.how-it-works {
+  padding: 70px 50px;
+  text-align: center;
+} 
+.cards {display: flex;
+justify-content: space-between; 
+max-width: fit-content;
+gap: 50px;
+}
+.step-card{background-color: var(--soft-blush);border-radius: 16px;
+  padding: 16px;
+}
+.wishes-card{background-color: var(--soft-blush);border-radius: 16px;
+  padding: 16px;
+}
+.share-card{background-color: var(--soft-blush);border-radius: 16px;
+  padding: 16px;
 }
