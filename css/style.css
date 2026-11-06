@@ -9,10 +9,9 @@ body {
   margin: 0;
   background-color: var(--porcelain);
   color: var(--deep-plum);
-  
 }
 nav {
-  background-color: var(--soft-blush);
+  background-color: var(--deep-plum);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +19,7 @@ nav {
   margin: 0;
 }
 nav a {
-  color: var(--deep-plum);
+  color: var(--soft-blush);
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -137,3 +136,50 @@ nav a:hover {
   transition: all 0.3s ease;
   transform: translateY(-3px);
 }
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #542638;
+}
+.logo {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: #fdf5f5;
+}
+.back-button {
+  background-color: #542638;
+  color: white;
+  padding: 9px;
+  border-radius: 16px;
+  margin: 10px;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  width: 100%;
+
+}
+
+.left,
+.right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.left img {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
+}
+.container {display: flex; justify-content: space-between; align-items: center; min-height: 100vh; padding: 4rem;}
