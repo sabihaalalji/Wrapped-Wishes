@@ -1,32 +1,40 @@
 :root {
-  --soft-blush: #F5E7EA;
-  --dusty-rose: #D99BAA;
-  --berry: #9C536B;
+  --soft-blush: #f5e7ea;
+  --dusty-rose: #d99baa;
+  --berry: #9c536b;
   --deep-plum: #542638;
-  --porcelain: #FDF5F5;
-}body {margin: 0;
-background-color: var(--porcelain);
-color: var(--deep-plum);
-margin: 20px;
+  --porcelain: #fdf5f5;
 }
-nav {background-color: var(--soft-blush)
-; display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-margin: 0;
-
+body {
+  margin: 0;
+  background-color: var(--porcelain);
+  color: var(--deep-plum);
+  margin: 20px;
 }
-nav a {color: var(--deep-plum);
-text-decoration: none;
-font-family: 'Poppins', sans-serif;
-  font-size: 14px;}
-  nav a:hover {color: var(--berry);}
-.logo {color: var(--deep-plum);
-font-family: 'Playfair Display', serif;
+nav {
+  background-color: var(--soft-blush);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  margin: 0;
+}
+nav a {
+  color: var(--deep-plum);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+nav a:hover {
+  color: var(--berry);
+}
+.logo {
+  color: var(--deep-plum);
+  font-family: "Playfair Display", serif;
   font-size: 26px;
-  font-weight: 600;}
-  .nav-links {
+  font-weight: 600;
+}
+.nav-links {
   display: flex;
   gap: 35px;
   align-items: center;
@@ -43,7 +51,8 @@ font-family: 'Playfair Display', serif;
   margin: 20px;
   border-radius: 16px;
 }
-.hero-content {text-align: center;
+.hero-content {
+  text-align: center;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -52,7 +61,7 @@ font-family: 'Playfair Display', serif;
   border-radius: 16px;
   padding: 15px;
 }
-.hero-buttons  {
+.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -73,18 +82,39 @@ font-family: 'Playfair Display', serif;
 .how-it-works {
   padding: 70px 50px;
   text-align: center;
-} 
-.cards {display: flex;
-justify-content: space-between; 
-max-width: fit-content;
-gap: 50px;
 }
-.step-card{background-color: var(--soft-blush);border-radius: 16px;
+.cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: fit-content;
+  gap: 50px;
+}
+.step-card {
+  background-color: var(--soft-blush);
+  border-radius: 16px;
   padding: 16px;
 }
-.wishes-card{background-color: var(--soft-blush);border-radius: 16px;
+.wishes-card {
+  background-color: var(--soft-blush);
+  border-radius: 16px;
   padding: 16px;
 }
-.share-card{background-color: var(--soft-blush);border-radius: 16px;
+.share-card {
+  background-color: var(--soft-blush);
+  border-radius: 16px;
   padding: 16px;
+}
+.why-us {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.why-image img {
+  max-height: 450px;
+  height: 450px;
+  border-radius: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
