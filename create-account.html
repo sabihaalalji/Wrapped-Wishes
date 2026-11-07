@@ -1,40 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an account</title>
+    <title>Create an account | Wrapped Wishes</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <h2>Wrapped Wishes</h2>
-    <form >
-        Lets get started! <label for="Full name">Full name</label>
-        <input type="name" id="name" name="name"
-            placeholder="Enter your Full name" required>
-            <br>
+
+    <h3>Let's get started!</h3>
+
+    <form id="create-account-form">
+
+        <label for="name">Full name</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="name"
+            placeholder="Enter your full name" 
+            required
+        >
+        <br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email"
-            placeholder="Enter your email" required>
-            <br>
+        <input 
+            type="email" 
+            id="email" 
+            name="email"
+            placeholder="Enter your email" 
+            required
+        >
+        <br>
 
-             <label for="password">Password</label>
-        <input type="password" id="password" name="password"
-            placeholder="Enter your password" required>
-            <br>
+        <label for="password">Password</label>
+        <input 
+            type="password" 
+            id="password" 
+            name="password"
+            placeholder="Enter your password" 
+            required
+        >
+        <br>
 
-            <label for=" Confirm password"> Confirm Password</label>
-        <input type="password" id="password" name="password"
-            placeholder="Confirm your password" required>
-            <br>
+        <label for="confirm-password">Confirm password</label>
+        <input 
+            type="password" 
+            id="confirm-password" 
+            name="confirm-password"
+            placeholder="Confirm your password" 
+            required
+        >
+        <br>
 
-            Create an account
-            Already have an account? <a href="sign-in.html">sign in</a>
+        <button type="submit">Create an account</button>
 
+        <p>Already have an account? 
+            <a href="sign-in.html">Sign in</a>
+        </p>
 
+    </form>
 
-        </form>
-        <script src="js/signin.js"></script>
+    <script src="js/create-account.js"></script>
+
 </body>
 </html>
