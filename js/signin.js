@@ -11,5 +11,6 @@ if (!foundUser) {
     if (foundUser.password !== password) {
     alert("Wrong password");
     return;
-}window.location.href = "dashboard.html";
+}localStorage.setItem("currentUser", JSON.stringify(foundUser));
+window.location.href = "dashboard.html";
 }})
