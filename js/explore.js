@@ -16,5 +16,12 @@ ${wishlist.itemLink}`;
 
   const exploreContainer = document.getElementById("explore-container");
   exploreContainer.appendChild(card);
+  const button = document.createElement("button");
+  document.createElement("button")
+  button.textContent = "Reserve";
+  card.appendChild(button)
+  button.addEventListener("click", function() {
+  wishlist.isReserved = true;
+});
   });
 
