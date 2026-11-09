@@ -41,19 +41,8 @@ const items = [];
   window.location.href = "dashboard.html";
 });
 
-const newWishlist = {creatorEmail: JSON.parse(localStorage.getItem("currentUser")).email,
-  isReserved: false,
-  wishlistName,
-  description,
-  occasion,
-  itemName,
-  itemLink,
-};
-const wishlists = JSON.parse(localStorage.getItem("wishlists")) || [];
-wishlists.push(newWishlist);
-localStorage.setItem ("wishlists", JSON.stringify(wishlists));alert("Wishlist saved!");
-window.location.href = "dashboard.html";
-});
+
+
 const addButton = document.getElementById("add-button")
 const giftContainer = document.querySelector(".gift-container")
 addButton.addEventListener("click", function() {const newGift =  document.createElement("div") 
