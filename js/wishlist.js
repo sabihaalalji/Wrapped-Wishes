@@ -6,8 +6,41 @@ wishlist.addEventListener("submit", function (event) {
 const wishlistName = document.getElementById("wishlist-name").value;
 const description = document.getElementById("wishlist-description").value;
 const occasion = document.getElementById("occasion").value;
-const itemName = document.getElementById("item-name").value;
-const itemLink = document.getElementById("item-link").value;
+
+const giftNames= document.querySelectorAll(".gift-name");
+const giftLinks= document.querySelectorAll(".gift-link");
+const items = [];
+
+  giftNames.forEach((gift, index) => {
+    const newGift = {
+      itemName: gift.value,
+      itemLink: giftLinks[index].value,
+      isReserved: false
+    };
+
+    items.push(newGift);
+  });
+
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  const newWishlist = {
+    creatorEmail: currentUser.email,
+    wishlistName,
+    description,
+    occasion,
+    items
+  };
+
+  const wishlists = JSON.parse(localStorage.getItem("wishlists")) || [];
+
+  wishlists.push(newWishlist);
+
+  localStorage.setItem("wishlists", JSON.stringify(wishlists));
+
+  alert("Wishlist saved!");
+  window.location.href = "dashboard.html";
+});
+
 const newWishlist = {creatorEmail: JSON.parse(localStorage.getItem("currentUser")).email,
   isReserved: false,
   wishlistName,
