@@ -22,10 +22,26 @@ localStorage.setItem ("wishlists", JSON.stringify(wishlists));alert("Wishlist sa
 window.location.href = "dashboard.html";
 });
 const addButton = document.getElementById("add-button")
+const giftContainer = document.querySelector(".gift-container")
 addButton.addEventListener("click", function() {const newGift =  document.createElement("div") 
-  const giftName = document.createElement("input")
-  const giftLink =  document.createElement("input")
+  
+  const nameLabel = document.createElement("label");
+nameLabel.textContent = "Gift name";
 
-  newGift.appendChild(giftName)
-  newGift.appendChild(giftLink)
+const giftName = document.createElement("input");
+giftName.classList.add("gift-name");
+
+const linkLabel = document.createElement("label");
+linkLabel.textContent = "Gift link";
+
+const giftLink = document.createElement("input");
+giftLink.classList.add("gift-link");
+
+newGift.appendChild(nameLabel);
+newGift.appendChild(giftName);
+newGift.appendChild(linkLabel);
+newGift.appendChild(giftLink);
+giftContainer.appendChild(newGift);
+
+
 });
