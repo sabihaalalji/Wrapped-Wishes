@@ -27,4 +27,6 @@ existingUsers.push(newUser);
 
 localStorage.setItem("users", JSON.stringify(existingUsers));
 
-alert("Account created successfully!");});
+alert("Account created successfully!");
+
+});

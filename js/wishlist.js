@@ -1,5 +1,6 @@
-const wishlist = document.getElementById("wishlist-form");
+console.log("Wishlist JS is running");const wishlist = document.getElementById("wishlist-form");
 wishlist.addEventListener("submit", function (event) {
+  
   event.preventDefault();
 
 const wishlistName = document.getElementById("wishlist-name").value;
@@ -8,6 +9,7 @@ const occasion = document.getElementById("occasion").value;
 const itemName = document.getElementById("item-name").value;
 const itemLink = document.getElementById("item-link").value;
 const newWishlist = {creatorEmail: JSON.parse(localStorage.getItem("currentUser")).email,
+  isReserved: false,
   wishlistName,
   description,
   occasion,
