@@ -21,3 +21,11 @@ wishlists.push(newWishlist);
 localStorage.setItem ("wishlists", JSON.stringify(wishlists));alert("Wishlist saved!");
 window.location.href = "dashboard.html";
 });
+const addButton = document.getElementById("add-button")
+addButton.addEventListener("click", function() {const newGift =  document.createElement("div") 
+  const giftName = document.createElement("input")
+  const giftLink =  document.createElement("input")
+
+  newGift.appendChild(giftName)
+  newGift.appendChild(giftLink)
+});
