@@ -4,21 +4,36 @@ let correctEmail = wishlists.filter(wishlist => wishlist.creatorEmail === curren
 const wishlistContainer =document.getElementById("wishlist-container")
 correctEmail.forEach(wishlist => { const card = document.createElement("div")
 card.classList.add("wishlist-card");
-card.textContent = `${wishlist.wishlistName} ${wishlist.description} ${wishlist.occasion} `;
+
+
+card.textContent = `${wishlist.wishlistName} ${wishlist.description} ${wishlist.occasion}`;
+
+wishlist.items.forEach(gift => {
+
+    const giftName = document.createElement("p");
+    giftName.textContent = gift.itemName;
+
+    card.appendChild(giftName);
+
+    const giftLink = document.createElement("a");
+    giftLink.href = gift.itemLink;
+    giftLink.textContent = "View gift";
+    giftLink.target = "_blank";
+
+    card.appendChild(giftLink);
+
+});
 const editButton = document.createElement("button")
+editButton.type = "button";
 editButton.textContent = "Edit"
 const deleteButton =document.createElement("button")
+deleteButton.type = "button";
 deleteButton.textContent = "Delete"
+
 editButton.addEventListener("click", function() 
 {const wishlistIndex = wishlists.indexOf(wishlist);
     localStorage.setItem("editingWishlistIndex", wishlistIndex);
     window.location.href = "create-wishlist.html";
-    
-
-
-
-
-
 });
 
 
@@ -26,6 +41,7 @@ card.appendChild(editButton)
 card.appendChild(deleteButton)
 wishlistContainer.appendChild(card)
 deleteButton.addEventListener("click", function() {
+     alert("Delete button clicked!");
     const wishlistIndex = wishlists.indexOf(wishlist);
 
     const confirmDelete = confirm("Are you sure you want to delete this wishlist?");
