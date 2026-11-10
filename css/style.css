@@ -27,12 +27,13 @@ nav a {
 nav a:hover {
   color: var(--berry);
 }
-.logo {
-  color: var(--deep-plum);
+nav a.logo {
+  color: #ffffff;
   font-family: "Playfair Display", serif;
   font-size: 26px;
   font-weight: 600;
 }
+
 .nav-links {
   display: flex;
   gap: 35px;
@@ -626,3 +627,8 @@ border-radius: 16px;}
   text-decoration: none;
 }
 .account:hover {color: #d99baa;}
+nav a.logo,
+nav a.logo:visited,
+nav a.logo:hover {
+  color: #ffffff;
+}
