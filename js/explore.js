@@ -1,4 +1,4 @@
-
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const exploreWishlists = JSON.parse(localStorage.getItem("wishlists")) || [];
 const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -24,7 +24,7 @@ exploreWishlists.forEach((wishlist) => {
 
   const button = document.createElement("button");
 
-  // Show the correct button text when the page loads
+ 
   if (wishlist.isReserved === true) {
     button.textContent = "Unreserve";
   } else {
@@ -34,13 +34,16 @@ exploreWishlists.forEach((wishlist) => {
   card.appendChild(button);
 
   button.addEventListener("click", function () {
-    if (wishlist.isReserved === false) {
+   if (wishlist.isReserved !== true) {
       wishlist.isReserved = true;
+      wishlist.reservedBy=currentUser.email
       button.textContent = "Unreserve";
     } else {
       wishlist.isReserved = false;
+      wishlist.reservedBy = null;
       button.textContent = "Reserve";
     }
+   
 
     localStorage.setItem(
       "wishlists",
