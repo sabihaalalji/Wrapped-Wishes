@@ -19,7 +19,7 @@ wishlist.items.forEach(gift => {
     giftLink.href = gift.itemLink;
     giftLink.textContent = "View gift";
     giftLink.target = "_blank";
-
+giftLink.classList.add("gift-link");
     card.appendChild(giftLink);
 
 });
@@ -29,7 +29,8 @@ editButton.textContent = "Edit"
 const deleteButton =document.createElement("button")
 deleteButton.type = "button";
 deleteButton.textContent = "Delete"
-
+ editButton.classList.add("edit-btn");
+deleteButton.classList.add("delete-btn");
 editButton.addEventListener("click", function() 
 {const wishlistIndex = wishlists.indexOf(wishlist);
     localStorage.setItem("editingWishlistIndex", wishlistIndex);
@@ -51,5 +52,6 @@ deleteButton.addEventListener("click", function() {
         localStorage.setItem("wishlists", JSON.stringify(wishlists));
         window.location.reload();
     }
+   
 });
 });
