@@ -431,3 +431,173 @@ border-radius: 20px;
     background-color: var(--berry);
     color: white;
 }
+.explore-hero {
+  display: flex;
+  margin: 50px;
+  gap: 20px;
+ 
+}
+.explore-intro{
+  flex: 1;
+}
+.explore-image {
+  flex: 1;
+  
+}
+.explore-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.explore-section {
+  padding: 100px 8%;
+  background-color: var(--porcelain);
+  text-align: center;
+}
+
+.explore-section h3 {
+  color: var(--berry);
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.explore-section h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--deep-plum);
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.explore-section > p {
+  color: #806875;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+#explore-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.wishlist-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #EAD5DC;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(84, 38, 56, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--deep-plum);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(84, 38, 56, 0.12);
+}
+
+.wishlist-card button {
+  background: var(--berry);
+  color: white;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wishlist-card button:hover {
+  background: var(--deep-plum);
+}
+
+.wishlist-card button:disabled {
+  background: #EAD5DC;
+  color: #806875;
+  cursor: not-allowed;
+}
+
+.your-reservations {
+  padding: 80px 8%;
+  background: var(--porcelain);
+  min-height: 80vh;
+}
+
+.your-reservations p {
+  color: #806875;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-top: 18px;
+}
+
+main > h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--deep-plum);
+  font-size: 46px;
+  text-align: center;
+  padding-top: 65px;
+  background: var(--porcelain);
+}
+
+.reservation-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #EAD5DC;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(84, 38, 56, 0.06);
+  color: var(--deep-plum);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  white-space: pre-line;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(84, 38, 56, 0.12);
+}
+
+.your-reservations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.your-reservations > p {
+  grid-column: 1 / -1;
+}
+.login label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--deep-plum);
+    font-size: 14px;
+}
+
+.login input {
+    display: block;
+    width: 50%;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e5c8d0;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+   justify-content: center;
+}
+.login-btn
