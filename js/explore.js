@@ -1,53 +1,62 @@
+
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const exploreWishlists = JSON.parse(localStorage.getItem("wishlists")) || [];
 const users = JSON.parse(localStorage.getItem("users")) || [];
+
+const exploreContainer = document.getElementById("explore-container");
 
 exploreWishlists.forEach((wishlist) => {
   const creator = users.find(
     (user) => user.email === wishlist.creatorEmail
   );
 
-  const card = document.createElement("div");
-  card.classList.add("wishlist-card");
+  
+  const gifts = wishlist.items || (wishlist.itemName ? [wishlist] : []);
 
-  card.textContent = `
-    ${creator?.name || "Someone"}
-    ${wishlist.wishlistName}
-    ${wishlist.description}
-    ${wishlist.occasion}
-    ${wishlist.itemName}
-    ${wishlist.itemLink}
-  `;
+  gifts.forEach((gift) => {
+    const card = document.createElement("div");
+    card.classList.add("wishlist-card");
 
-  const exploreContainer = document.getElementById("explore-container");
-  exploreContainer.appendChild(card);
+    card.textContent = `
+      ${creator?.name || "Someone"}
+      ${wishlist.wishlistName}
+      ${wishlist.description}
+      ${wishlist.occasion}
+      ${gift.itemName}
+    `;
 
-  const button = document.createElement("button");
+    const button = document.createElement("button");
 
- 
-  if (wishlist.isReserved === true) {
-    button.textContent = "Unreserve";
-  } else {
-    button.textContent = "Reserve";
-  }
-
-  card.appendChild(button);
-
-  button.addEventListener("click", function () {
-   if (wishlist.isReserved !== true) {
-      wishlist.isReserved = true;
-      wishlist.reservedBy=currentUser.email
-      button.textContent = "Unreserve";
+    
+    if (gift.isReserved === true) {
+      if (gift.reservedBy === currentUser.email) {
+        button.textContent = "Unreserve";
+      } else {
+        button.textContent = "Already Reserved";
+        button.disabled = true;
+      }
     } else {
-      wishlist.isReserved = false;
-      wishlist.reservedBy = null;
       button.textContent = "Reserve";
     }
-   
 
-    localStorage.setItem(
-      "wishlists",
-      JSON.stringify(exploreWishlists)
-    );
+    card.appendChild(button);
+    exploreContainer.appendChild(card);
+
+    button.addEventListener("click", function () {
+      if (gift.isReserved !== true) {
+        gift.isReserved = true;
+        gift.reservedBy = currentUser.email;
+        button.textContent = "Unreserve";
+      } else if (gift.reservedBy === currentUser.email) {
+        gift.isReserved = false;
+        gift.reservedBy = null;
+        button.textContent = "Reserve";
+      }
+
+      localStorage.setItem(
+        "wishlists",
+        JSON.stringify(exploreWishlists)
+      );
+    });
   });
 });
