@@ -600,4 +600,11 @@ main > h1 {
     font-size: 14px;
    justify-content: center;
 }
-.login-btn
+.login-btn {background-color: #9c536b; color: white;
+padding: 10px;
+border-radius: 16px;}
+.account {
+  color: #542638;
+  text-decoration: none;
+}
+.account:hover {color: #d99baa;}
