@@ -395,11 +395,7 @@ border-radius: 20px;
     font-size: 14px;
    justify-content: center;
 }
-.wishlist-body{
-  margin: 100px;
-  margin-top: 15px;
- 
-}
+
 #wishlist-form {
     background-color: var(--porcelain);
     width: 100%;
