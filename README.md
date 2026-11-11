@@ -70,6 +70,9 @@ Wrapped Wishes uses the browser's **Local Storage** to store account information
 
 The project does not currently use a backend or database. Data is stored locally in the browser.
 
+## screenshot
+![Home page](images/screenshot.jpeg)
+
 ## Project Purpose
 
 Wrapped Wishes aims to make gift-giving easier, more personal and more enjoyable by helping people share what they wish for while allowing others to choose and reserve gifts thoughtfully.

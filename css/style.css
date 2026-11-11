@@ -549,14 +549,16 @@ border-radius: 20px;
   padding: 80px 8%;
   background: var(--porcelain);
   min-height: 80vh;
+  text-align: center;
 }
 
 .your-reservations p {
   color: #806875;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 20px;
+  
   max-width: 600px;
-  margin-top: 18px;
+  
+  
 }
 
 main > h1 {
@@ -627,4 +629,9 @@ nav a.logo,
 nav a.logo:visited,
 nav a.logo:hover {
   color: #ffffff;
+}
+.explore-hero{margin: 150px;}
+.create-wish {
+  margin: 150px;
+  margin-top: 0;
 }
