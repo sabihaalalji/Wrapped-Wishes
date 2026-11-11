@@ -77,5 +77,7 @@ The project does not currently use a backend or database. Data is stored locally
 
 Wrapped Wishes aims to make gift-giving easier, more personal and more enjoyable by helping people share what they wish for while allowing others to choose and reserve gifts thoughtfully.
 
----
+## Author
+Sabihaa Lalji, Zindua School
+
 
