@@ -546,10 +546,9 @@ border-radius: 20px;
 }
 
 .your-reservations {
-  padding: 80px 8%;
-  background: var(--porcelain);
-  min-height: 80vh;
-  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
 }
 
 .your-reservations p {
