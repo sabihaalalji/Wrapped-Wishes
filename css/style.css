@@ -634,3 +634,304 @@ nav a.logo:hover {
   margin: 150px;
   margin-top: 0;
 }
+
+
+/* Responsive layouts */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 18px 24px;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 14px 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .cards {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  #wishlist-container,
+  #explore-container,
+  .your-reservations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .explore-hero {
+    margin: 50px 32px;
+  }
+
+  .create-wish {
+    margin: 50px 32px 0;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 16px;
+    gap: 16px;
+  }
+
+  nav a.logo {
+    font-size: 25px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 360px;
+    margin: 12px;
+    padding: 18px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 22px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.15;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hero-buttons a,
+  .CTA a {
+    text-align: center;
+  }
+
+  .how-it-works {
+    padding: 48px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step-card,
+  .wishes-card,
+  .share-card {
+    width: 100%;
+  }
+
+  .why-us {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .why-image img {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    object-fit: cover;
+  }
+
+  .why-content {
+    text-align: center;
+  }
+
+  .CTA {
+    padding: 36px 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+    gap: 18px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 20px 8px;
+  }
+
+  .left img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .dashboard {
+    padding: 36px 18px;
+  }
+
+  .dashboard-hero {
+    padding: 38px 20px;
+    margin-bottom: 28px;
+  }
+
+  #wishlist-container,
+  #explore-container,
+  .your-reservations {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .wishlist-card,
+  .reservation-card {
+    padding: 22px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .explore-hero {
+    flex-direction: column;
+    margin: 28px 18px;
+  }
+
+  .explore-image img {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .explore-section {
+    padding: 54px 18px;
+  }
+
+  .explore-section h2,
+  main > h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  main > h1 {
+    padding: 38px 18px 0;
+  }
+
+  .your-reservations {
+    padding: 0 18px 48px;
+  }
+
+  .your-reservations p {
+    font-size: 16px;
+  }
+
+  .create-wish {
+    margin: 24px 16px 0;
+  }
+
+  #wishlist-form,
+  #create-account-form {
+    width: 100%;
+    padding: 26px 20px;
+    margin: 20px auto;
+  }
+
+  .wishlist-body input,
+  .login input {
+    width: 100%;
+  }
+
+  .sign-up {
+    padding: 28px 16px;
+  }
+
+  .sign-up h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .sign-up h3 {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .back-button {
+    display: inline-block;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-links {
+    gap: 9px 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 330px;
+    padding: 12px;
+  }
+
+  .hero-buttons a {
+    padding: 12px 16px;
+  }
+
+  #wishlist-container,
+  #explore-container,
+  .your-reservations {
+    padding: 12px;
+  }
+}
